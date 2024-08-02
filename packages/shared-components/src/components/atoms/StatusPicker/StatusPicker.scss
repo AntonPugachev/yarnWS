@@ -1,0 +1,63 @@
+@import 'src/styles/mixins';
+
+.status-picker__container {
+  display: flex;
+  padding-left: 4px;
+  margin-bottom: 16px;
+  flex-direction: row;
+  input {
+    display: none;
+  }
+  label {
+    @include text-s-14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    height: 40px;
+    border-color: var(--neutral-10);
+    border-width: 0.5px;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+    border-style: solid;
+    box-sizing: border-box;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--neutral-05);
+    }
+  }
+}
+.status-picker__items:first-child {
+  label {
+    border-left-width: 1px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+}
+.status-picker__items:last-child {
+  label {
+    border-right-width: 1px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+}
+
+.status-picker__items {
+  label.status-picker__label--low {
+    background-color: var(--success-10);
+    color: var(--success-50-main);
+  }
+  label.status-picker__label--medium {
+    color: var(--warning-50-main);
+    background-color: var(--attention-10);
+  }
+  label.status-picker__label--high {
+    color: var(--error-60-main);
+    background-color: #ffe5e7;
+  }
+
+  label.status-picker__label--disabled {
+    color: var(--neutral-30);
+    background-color: var(--neutral-05);
+  }
+}

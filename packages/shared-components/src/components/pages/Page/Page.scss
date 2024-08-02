@@ -1,0 +1,48 @@
+@import "src/styles/mixins";
+
+.rf-page {
+  background-color: var(--neutral-05);
+}
+
+.rf-page__header {
+  display: flex;
+  align-items: center;
+  height: 76px;
+  padding: 20px 0;
+}
+
+.rf-page__header-back {
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include round(36px);
+  background-color: var(--neutral-10);
+  color: var(--neutral-50);
+}
+
+.rf-page__content {
+  min-height: 100%;
+}
+
+.rf-page__header-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.rf-page__title {
+  @include h5();
+}
+
+.rf-page__user {
+  margin-left: auto;
+}
+
+.rf-page__tabs {
+  max-width: 880px;
+  margin-bottom: 20px;
+}
+
+.sb-show-main.sb-main-padded {
+  padding: 0 !important;
+}

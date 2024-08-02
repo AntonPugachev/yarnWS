@@ -1,0 +1,99 @@
+@import "src/styles/mixins";
+
+.rf-avatar-stack {
+  display: flex;
+  align-items: center;
+  cursor: default;
+}
+
+.rf-avatar-stack__tooltip {
+  width: fit-content;
+}
+
+.rf-avatar-stack__item {
+  position: relative;
+  border: 2px solid var(--neutral-00);
+  border-radius: 100%;
+  user-select: none;
+  cursor: pointer;
+
+  & > div:first-of-type {
+    display: flex;
+
+    & > div:first-of-type {
+      display: flex;
+    }
+  }
+}
+
+.rf-avatar-stack--clickable {
+  cursor: pointer;
+
+  .rf-avatar {
+    cursor: pointer;
+  }
+}
+
+.rf-avatar-stack__tooltip-content-wrapper {
+  display: flex;
+}
+
+.rf-avatar-stack__tooltip-info-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.rf-avatar-stack__tooltip-avatar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 12px;
+}
+
+.rf-avatar-stack__tooltip-content-container {
+  margin-bottom: 16px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.rf-avatar-stack__tooltip-name {
+  @include text-m-16();
+}
+
+.rf-avatar-stack__tooltip-name--you {
+  @include text-m-16();
+  color: var(--primary-60-main);
+}
+
+.rf-avatar-stack__tooltip-TN {
+  @include text-s-14();
+  color: var(--neutral-50);
+}
+
+.rf-avatar-stack__collective-tooltip-wrapper {
+  display: flex;
+  max-height: 360px;
+  width: 360px;
+  padding: 0;
+}
+
+.rf-avatar-stack--inner-tooltip-container {
+  display: flex;
+  flex-direction: column;
+  max-height: 360px;
+  width: 360px;
+  overflow-y: scroll;
+  padding: 20px;
+
+  &::-webkit-scrollbar-button {
+    color: transparent;
+    height: 4px;
+  }
+}
+
+.rf-avatar-stack__collective-avatar {
+  display: flex;
+  align-items: center;
+}

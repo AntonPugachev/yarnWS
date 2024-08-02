@@ -1,0 +1,44 @@
+@import '../../../styles/mixins';
+
+.rf-form-group {
+  width: 100%;
+}
+
+.rf-form-group__inner:focus-within .rf-form-group__label {
+  color: var(--primary-80);
+}
+
+.rf-form-group__label {
+  @include text-xs-14();
+  @include clearfix;
+  color: var(--neutral-50);
+  margin-bottom: 8px;
+  transition: 0.15s ease-in;
+}
+
+.rf-form-group__label--disabled {
+  color: var(--neutral-30);
+}
+
+.rf-form-group__label-secondary {
+  float: right;
+  margin-left: 8px;
+}
+
+.rf-form-group__message_no_invalidd {
+  color: var(--error-60-main);
+}
+
+.rf-form-group__message {
+  margin-top: 8px;
+  @include text-xs-14();
+  color: var(--error-60-main);
+}
+
+.rf-form-group__message_no-invalid {
+  color: var(--neutral-50);
+}
+
+.rf-form-group__required {
+  color: var(--error-60-main);
+}

@@ -1,0 +1,138 @@
+@import '../../../styles/mixins';
+
+.rf-pagination,
+.rf-pagination--disabled {
+  display: flex;
+  align-items: center;
+  .rf-pagination__input {
+    margin-left: 8px;
+    width: 129px;
+  }
+}
+.rf-pagination--disabled {
+  cursor: not-allowed;
+}
+.rf-pagination--disabled {
+  cursor: not-allowed;
+  .rf-pagination__label,
+  .rf-pagination__label--selected,
+  .rf-pagination__chevron-wrapper {
+    cursor: not-allowed;
+    color: var(--neutral-30);
+    background-color: transparent;
+    &:hover {
+      background-color: transparent;
+      color: var(--neutral-30);
+    }
+  }
+  .rf-pagination__ellipsis {
+    color: var(--neutral-30);
+  }
+  .rf-pagination__input {
+    display: none;
+  }
+}
+
+.rf-pagination__chevron-wrapper {
+  color: var(--neutral-50);
+}
+
+.rf-pagination__chevron-left {
+  margin-right: 8px;
+}
+
+.rf-pagination__chevron-right {
+  margin-left: 8px;
+}
+
+.rf-pagination__label {
+  @include text-m-16;
+  user-select: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.rf-pagination__label-simple {
+  width: 16px;
+  height: 4px;
+  display: flex;
+  border-radius: 2px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--neutral-10);
+  margin: 0px 8px;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--primary-70);
+  }
+  &:active {
+    background-color: var(--primary-80);
+  }
+  &--disabled {
+    cursor: default;
+    color: var(--neutral-30);
+    &:hover {
+      background-color: initial;
+      color: var(--neutral-30);
+    }
+  }
+  &--selected {
+    color: var(--static-white);
+    background-color: var(--primary-60-main);
+    &:hover {
+      background-color: var(--primary-70);
+      color: var(--static-white);
+    }
+  }
+}
+
+.rf-pagination__label,
+.rf-pagination__chevron-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  &:hover {
+    background-color: var(--neutral-10);
+    color: var(--primary-70);
+  }
+  &:active {
+    background-color: var(--neutral-10);
+    color: var(--primary-80);
+  }
+  &--disabled {
+    cursor: default;
+    color: var(--neutral-30);
+    &:hover {
+      background-color: initial;
+      color: var(--neutral-30);
+    }
+  }
+  &--selected {
+    color: var(--static-white);
+    background-color: var(--primary-60-main);
+    &:hover {
+      background-color: var(--primary-60-main);
+      color: var(--static-white);
+    }
+  }
+}
+
+.rf-pagination__ellipsis {
+  width: 40px;
+  height: 40px;
+  @include text-l-16;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--neutral-90);
+}

@@ -1,0 +1,105 @@
+{
+  "name": "@monorepo/shared-components",
+  "version": "2.0.8",
+  "description": "Библиотека компонентов Juicy Team",
+  "main": "index.cjs.js",
+  "module": "index.js",
+  "scripts": {
+    "build": "rimraf dist && rollup --config rollup.config.js && node copy.js",
+    "storybook": "storybook dev -p 6006",
+    "start": "npm run storybook",
+    "build-storybook": "storybook build",
+    "lint": "eslint --fix --ext .ts,.tsx .",
+    "test": "jest",
+    "t": " npm run commit && git tag v6 && git push --tags",
+    "commit": "git add . && node ./node_modules/cz-customizable/standalone.js",
+    "wincommit": "node ./node_modules/cz-customizable/standalone.js",
+    "deploy": "npm run build-storybook && firebase deploy",
+    "release": "release-it",
+    "size": "source-map-explorer dist/index.js --no-border-checks",
+    "make-icons": "ts-node src/assets/icons/iconProcessor.ts && eslint --fix --ext .ts,.tsx src/assets/icons/resultDir src/components/atoms/Icons/Icons.stories.tsx"
+  },
+  "dependencies": {
+    "@hookform/error-message": "2.0.0",
+    "@popperjs/core": "2.11.2",
+    "axios": "1.7.3",
+    "crypto-pro": "2.3.0",
+    "pdfjs-dist": "4.5.136",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "7.27.1",
+    "react-infinite-scroll-component": "6.1.0",
+    "react-input-mask": "3.0.0-alpha.2",
+    "react-pdf": "5.7.1",
+    "react-popper": "2.2.5",
+    "react-resize-detector": "6.7.8",
+    "react-router-dom": "5.3.4",
+    "resize-observer-polyfill": "1.5.1",
+    "rxjs": "7.5.4"
+  },
+  "devDependencies": {
+    "@chromatic-com/storybook": "^1.6.1",
+    "@storybook/addon-actions": "8.2.7",
+    "@storybook/addon-designs": "8.0.3",
+    "@storybook/addon-essentials": "^8.2.7",
+    "@storybook/addon-interactions": "^8.2.7",
+    "@storybook/addon-links": "^8.2.7",
+    "@storybook/addon-onboarding": "^8.2.7",
+    "@storybook/blocks": "^8.2.7",
+    "@storybook/builder-vite": "8.2.7",
+    "@storybook/core": "8.2.7",
+    "@storybook/react": "^8.2.7",
+    "@storybook/react-vite": "^8.2.7",
+    "@storybook/test": "^8.2.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-input-mask": "3.0.1",
+    "@types/react-pdf": "5.7.4",
+    "@types/react-router-dom": "5.3.3",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "eslint-plugin-storybook": "^0.8.0",
+    "resolve-url-loader": "4.0.0",
+    "sass": "1.77.8",
+    "storybook": "^8.2.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4"
+  },
+  "keywords": [],
+  "author": " ",
+  "license": "ISC",
+  "homepage": "https://bitbucket.region.vtb.ru/projects/IPRT/repos/juicyfront/browse",
+  "engines": {
+    "node": ">=14.17.5",
+    "npm": "^6.14.0",
+    "yarn": "Временно НЕ работаем с yarn для совместимости процесса билда. Use npm v.6.x.x"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss",
+    "**/*.scss.js"
+  ],
+  "peerDependencies": {
+    "@openvtb/fonts": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "./.eslintrc.json"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)?$": "ts-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|scss|svg|png)$": "identity-obj-proxy",
+      "^react-pdf/dist/esm/entry.webpack$": "react-pdf/dist/umd/entry.jest"
+    },
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "./setupTests.ts"
+    ]
+  }
+}

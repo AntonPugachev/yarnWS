@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@monorepo/*": ["./packages/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    {
+      "path": "./packages/vite-project"
+    }
+  ]
+}

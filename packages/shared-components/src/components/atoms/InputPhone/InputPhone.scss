@@ -1,0 +1,73 @@
+.rf-phone-input {
+  min-width: 300px;
+
+  &__country {
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__text {
+    &-disabled {
+      .rf-input__field:disabled {
+        cursor: not-allowed;
+        color: var(--neutral-30);
+      }
+    }
+  }
+
+  &__flag {
+    border-radius: 2px;
+    color: var(--neutral-30);
+
+    &-disabled {
+      opacity: 0.5;
+    }
+  }
+
+  &__button {
+    transition: transform 0.3s;
+    margin-left: 4px;
+
+    &:disabled {
+      color: var(--neutral-30);
+      cursor: not-allowed;
+    }
+
+    &--rotate {
+      transform: rotate(180deg);
+      color: var(--primary-60-main);
+    }
+  }
+
+  &__list {
+    padding: 12px 0;
+  }
+
+  &__option {
+    display: flex;
+    width: 100%;
+    padding: 8px 16px;
+  }
+
+  &__option-flag {
+    margin-right: 8px;
+  }
+
+  &__option-text {
+    color: var(--neutral-90);
+    margin-right: 4px;
+
+    &--selected {
+      color: var(--primary-60-main);
+    }
+  }
+
+  &__option-code {
+    color: var(--neutral-50);
+
+    &--selected {
+      color: var(--primary-60-main);
+    }
+  }
+}

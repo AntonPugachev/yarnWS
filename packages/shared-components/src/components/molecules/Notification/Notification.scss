@@ -1,0 +1,79 @@
+@import 'src/styles/mixins';
+
+.rf-notification {
+  margin-top: 16px;
+  position: relative;
+  width: 440px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  cursor: default;
+  overflow: hidden;
+  background-color: var(--neutral-00);
+  box-shadow: var(--shadow-non-clickable);
+  border-radius: 16px;
+}
+
+.rf-notification::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 8px;
+  background-color: transparent;
+}
+
+.rf-notification__icon {
+  flex-shrink: 0;
+}
+
+.rf-notification--default {
+  color: var(--primary-60-main);
+}
+
+.rf-notification--blue {
+  color: var(--primary-60-main);
+}
+
+.rf-notification--green {
+  color: var(--success-50-main);
+}
+
+.rf-notification--yellow {
+  color: var(--attention-40);
+}
+
+.rf-notification--red {
+  color: var(--error-60-main);
+}
+
+.rf-notification__wrap {
+  margin-left: 12px;
+}
+
+.rf-notification__title {
+  width: 100%;
+  @include text-l-16-bold;
+  white-space: normal;
+}
+
+.rf-notification__message {
+  width: 100%;
+  @include text-s-14;
+  white-space: normal;
+  color: var(--neutral-50);
+}
+
+.rf-notification__close {
+  flex-grow: 0;
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  min-width: 32px;
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: var(--neutral-30);
+}

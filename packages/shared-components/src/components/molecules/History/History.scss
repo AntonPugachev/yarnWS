@@ -1,0 +1,35 @@
+@import "../../../styles/mixins";
+
+.rf-history {
+  display: flex;
+  flex-direction: column;
+}
+
+.rf-history__button {
+  display: flex;
+  margin-left: 64px;
+}
+
+.rf-history__attachments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.rf-history__attachments-line {
+  display: flex;
+  height: 1px;
+  background: var(--neutral-05);
+}
+
+.rf-history__attachments-title {
+  @include text-m-16();
+  color: var(--neutral-50);
+  margin-top: 18px;
+}
+
+.rf-history__attachments-container {
+  margin: 4px -6px -6px;
+  display: flex;
+  flex-wrap: wrap;
+}

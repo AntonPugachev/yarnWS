@@ -1,0 +1,56 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+$size: 32px;
+$margin: 2px;
+
+.rf-timepicker__wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  .rf-timepicker__btn {
+    min-width: auto;
+  }
+}
+
+.rf-timepicker-minified {
+  width: 184px;
+  & .rf-menu__toggle {
+    label {
+      height: 48px;
+      &.rf-input {
+        border-radius: 0px;
+      }
+    }
+    .rf-timepicker__menu {
+      bottom: 8px;
+    }
+  }
+}
+
+.rf-timepicker--disabled {
+  pointer-events: none;
+
+  .rf-timepicker__icon {
+    color: var(--neutral-30);
+  }
+}
+
+.rf-timepicker--empty input {
+  color: var(--neutral-30);
+}
+
+.rf-timepicker__menu {
+  position: absolute;
+  right: 10px;
+  bottom: 4px;
+}
+
+.rf-timepicker__wrapper .rf-input__field[readonly] {
+  cursor: default;
+}
+
+.rf-timepicker__icon {
+  color: var(--neutral-50);
+}

@@ -1,0 +1,212 @@
+@import '../../../styles/mixins';
+
+.rf-chip {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 16px;
+  cursor: default;
+  transition: 0.15s ease-in all;
+
+  &:focus {
+    @include a11y();
+  }
+
+  &--s {
+    @include text-s-14;
+    padding: 6px 12px;
+
+    .rf-chip__icon--left {
+      margin-right: 8px;
+      margin-left: -6px;
+    }
+
+    .rf-chip__icon--right {
+      margin-left: 8px;
+      margin-right: -6px;
+
+      &:focus {
+        @include a11y();
+      }
+    }
+
+    .rf-chip__badge {
+      margin-left: 8px;
+    }
+  }
+
+  &--xs {
+    @include caption;
+    padding: 4px 8px;
+
+    .rf-chip__icon--left {
+      margin-right: 6px;
+      margin-left: -4px;
+    }
+
+    .rf-chip__icon--right {
+      margin-left: 6px;
+      margin-right: -4px;
+
+      &:focus {
+        @include a11y();
+      }
+    }
+
+    .rf-chip__badge {
+      margin-left: 6px;
+    }
+  }
+
+  &--primary {
+    background-color: var(--primary-60-main);
+    color: var(--static-white);
+
+    .rf-chip__badge {
+      background-color: var(--neutral-00);
+      color: var(--neutral-90);
+    }
+
+    &.rf-chip--clickable {
+      &:hover, &:focus-visible {
+        background-color: var(--primary-70);
+      }
+    }
+
+    &.rf-chip--disabled {
+      background-color: var(--neutral-30);
+    }
+  }
+
+  &--secondary {
+    background-color: var(--neutral-05);
+    color: var(--neutral-90);
+  
+    .rf-chip__icon {
+      color: var(--neutral-50);
+    }
+
+    .rf-chip__badge {
+      background-color: var(--neutral-10);
+      color: var(--neutral-50);
+    }
+
+    &.rf-chip--clickable {
+      &:hover, &:focus-visible {
+        background-color: var(--neutral-10);
+
+        .rf-chip__badge {
+          background-color: var(--neutral-20);
+          color: var(--neutral-50);
+        }
+      }
+    }
+
+    &.rf-chip--disabled {
+      background-color: var(--neutral-05);
+      color: var(--neutral-30);
+
+      .rf-chip__icon {
+        color: var(--neutral-30);
+      }
+
+      .rf-chip__badge {
+        background-color: var(--neutral-10);
+        color: var(--neutral-30);
+      }
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    border-color: var(--primary-60-main);
+    color: var(--primary-60-main);
+    box-shadow: inset 0 0 0 1px currentColor;
+
+    .rf-chip__badge {
+      background-color: var(--primary-60-main);
+      color: var(--static-white);
+    }
+
+    &.rf-chip--clickable {
+      &:hover, &:focus-visible {
+        background-color: var(--primary-20);
+        color: var(--primary-70);
+
+        .rf-chip__badge {
+          background-color: var(--primary-70);
+          color: var(--static-white);
+        }
+      }
+    }
+
+    &.rf-chip--disabled {
+      background-color: transparent;
+      color: var(--neutral-30);
+
+      .rf-chip__badge {
+        background-color: var(--neutral-10);
+        color: var(--neutral-30);
+      }
+    }
+  }
+
+
+  &--fill {
+    background-color: var(--primary-20);
+    color: var(--primary-60-main);
+
+    .rf-chip__badge {
+      background-color: var(--primary-60-main);
+      color: var(--static-white);
+    }
+    
+    &.rf-chip--clickable {
+      &:hover, &:focus-visible {
+        color: var(--primary-70);
+
+        .rf-chip__badge {
+          background-color: var(--primary-70);
+          color: var(--static-white);
+        }
+      }
+    }
+
+    &.rf-chip--disabled {
+      color: var(--static-white);
+      background-color: var(--neutral-30);
+
+      .rf-chip__badge {
+        background-color: var(--neutral-00);
+        color: var(--neutral-50);
+      }
+    }
+  }
+
+  &--clickable {
+    cursor: pointer;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    color: inherit;
+  }
+
+  &__badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border-radius: 8px;
+    height: 16px;
+    min-width: 17px;
+    transition: 0.15s ease-in all;
+    padding: 0 5px;
+  }
+  
+  &__badge-text {
+    @include caption;
+    color: inherit;
+  }
+}

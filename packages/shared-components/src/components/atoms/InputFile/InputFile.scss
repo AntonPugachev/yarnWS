@@ -1,0 +1,19 @@
+@import "../../../styles/mixins";
+
+.rf-file-input__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .rf-file-input__attachments {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+}
+
+.file-input__wrapper .rf-input {
+  width: auto;
+  flex-shrink: 0;
+}

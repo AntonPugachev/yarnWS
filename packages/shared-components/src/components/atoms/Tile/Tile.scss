@@ -1,0 +1,42 @@
+.rf-tile {
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+}
+
+.rf-tile--none {
+  box-shadow: none;
+}
+
+.rf-tile--default {
+  box-shadow: var(--shadow-clickable-active);
+}
+
+.rf-tile--clickable-default {
+  box-shadow: var(--shadow-clickable-default);
+}
+
+.rf-tile--non-clickable {
+  box-shadow: var(--shadow-non-clickable);
+}
+
+.rf-tile--clickable-hover {
+  box-shadow: var(--shadow-clickable-hover);
+}
+
+.rf-tile--border {
+  border: 1px solid var(--neutral-10);
+}
+
+.rf-tile__background {
+  background: var(--neutral-00);
+}
+
+.rf-tile--stretch {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.rf-tile:last-of-type {
+  margin-bottom: 0;
+}

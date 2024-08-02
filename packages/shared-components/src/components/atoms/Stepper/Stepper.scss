@@ -1,0 +1,12 @@
+.rf-stepper {
+  width: 100%;
+  display: grid;
+
+  &.rf-stepper--horizontal {
+    grid-template-columns: repeat(auto-fit, minmax(150px, min-content));
+  }
+
+  &.rf-stepper--vertical {
+    grid-auto-rows: minmax(60px, min-content);
+  }
+}

@@ -1,0 +1,177 @@
+@import '../../../styles/mixins';
+@import '../../../styles/variables';
+
+.rf-input {
+  align-items: center;
+  box-shadow: 0 0 0 1px var(--neutral-50) inset;
+  border-radius: 8px;
+  display: inline-flex;
+  padding: 0 16px;
+  position: relative;
+  transition: 0.15s ease-in;
+  vertical-align: top;
+  width: 100%;
+  height: 40px;
+  box-sizing: border-box;
+
+  &--filled {
+    background-color: var(--neutral-00);
+  }
+
+  &--invalid {
+    box-shadow: 0 0 0 1px var(--error-60-main) inset;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 1px var(--primary-70) inset;
+  }
+
+  &--focused {
+    box-shadow: 0 0 0 1px var(--primary-80) inset;
+  }
+
+  &--inline {
+    box-shadow: none;
+
+    &.rf-input--invalid {
+      box-shadow: 0 0 0 1px var(--error-60-main) inset;
+    }
+
+    &:hover {
+      box-shadow: 0 0 0 1px var(--primary-80) inset;
+    }
+
+    &.rf-input--focused {
+      box-shadow: 0 0 0 1px var(--primary-80) inset;
+    }
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background-color: var(--neutral-10);
+
+    &,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &--readonly {
+    background-color: var(--neutral-10);
+
+    &,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  &__adornment {
+    display: flex;
+    align-items: center;
+    color: var(--neutral-50);
+
+    & svg {
+      display: block;
+    }
+
+    &--start {
+      margin-right: 8px;
+    }
+
+    &--end {
+      margin-left: 8px;
+    }
+  }
+}
+
+.rf-input--non-border {
+  box-shadow: none;
+  input {
+    padding-left: 81px;
+  }
+}
+
+.rf-input__field {
+  @include text-l-16;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: 0.15s ease-in;
+  background: transparent;
+  color: var(--neutral-90);
+  border: 0;
+  height: 24px;
+
+  &::placeholder {
+    @include text-l-16;
+    color: var(--neutral-50);
+  }
+
+  &:read-only {
+    color: var(--neutral-50);
+  }
+
+  &.disabled,
+  &:disabled {
+    cursor: default;
+    color: var(--neutral-30);
+
+    &::placeholder {
+      color: var(--neutral-30);
+    }
+  }
+
+  &.rf-input__field--file {
+    cursor: pointer;
+  }
+}
+
+.rf-input__field:disabled::placeholder {
+  color: var(--neutral-50);
+}
+
+/** [START] file-input */
+
+.rf-input__file-hidden {
+  @include hidden;
+}
+
+.rf-input__file-placeholder {
+  line-height: 20px;
+  @include text-l-16;
+  color: var(--neutral-50);
+}
+
+.rf-input__file-value {
+  @include text-l-16;
+}
+
+input[type='file']:disabled + .rf-input__field.rf-input__field--file {
+  @include disabled();
+}
+
+/** [END] file-input */
+
+.rf-input__action {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  color: var(--neutral-50);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    fill: var(--neutral-30);
+  }
+}
+
+.rf-input__action:hover,
+.rf-input__action:focus {
+  color: var(--primary-80);
+}

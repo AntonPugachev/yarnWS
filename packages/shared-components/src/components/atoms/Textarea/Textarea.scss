@@ -1,0 +1,130 @@
+@import '../../../styles/mixins';
+
+.rf-textarea {
+  width: 100%;
+  position: relative;
+
+  &--clearable {
+    padding-right: 48px;
+  }
+}
+
+.rf-textarea__wrapper {
+  transition: 0.15s ease-in;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px var(--neutral-50);
+  border-radius: 8px;
+  background-color: var(--neutral-00);
+
+  &--invalid {
+    box-shadow: 0 0 0 1px var(--error-60-main);
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 1px var(--primary-80);
+  }
+
+  &--focused {
+    box-shadow: 0 0 0 1px var(--primary-80);
+  }
+
+  &--disabled {
+    pointer-events: none;
+    background-color: var(--neutral-10);
+
+    &,
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.rf-textarea__action {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 22px;
+  right: 16px;
+  transform: translateY(-50%);
+  color: var(--neutral-50);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    fill: var(--neutral-50);
+  }
+}
+
+.rf-textarea__action:hover,
+.rf-textarea__action:focus {
+  color: var(--primary-60-main);
+}
+
+.rf-textarea__wrapper--auto-resize {
+  display: grid;
+  min-height: 88px;
+}
+
+.rf-textarea--scroll {
+  height: 88px;
+}
+
+.rf-textarea__wrapper--auto-resize::after {
+  content: attr(data-replicated-value) ' ';
+  white-space: pre-wrap;
+  visibility: hidden;
+  overflow-wrap: anywhere;
+}
+
+.rf-textarea__wrapper--auto-resize > .rf-textarea__field {
+  resize: none;
+  overflow: hidden;
+}
+
+.rf-textarea__wrapper--auto-resize > .rf-textarea__field,
+.rf-textarea__wrapper--auto-resize::after {
+  padding: 14px 16px;
+  font: inherit;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.rf-textarea__field {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 0;
+  box-sizing: border-box;
+  background: none;
+
+  @include text-m-16;
+}
+
+.rf-textarea__field::placeholder {
+  @include text-m-16;
+  color: var(--neutral-50);
+}
+
+.rf-textarea__field:disabled {
+  cursor: default;
+  color: var(--neutral-50);
+}
+
+.rf-textarea__max-length {
+  @include caption;
+  color: var(--neutral-50);
+  margin-top: 8px;
+  text-align: right;
+}
+
+.rf-textarea__max-length--float {
+  margin-top: 0;
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+}

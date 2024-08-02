@@ -1,0 +1,164 @@
+@import 'src/styles/mixins';
+
+.rate-picker.disabled {
+  height: 20px;
+  .rate-picker__container {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+.rate-picker__content {
+  display: inline-block;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+
+  label {
+    color: var(--neutral-90);
+  }
+}
+
+.rate-picker__container {
+  @include text-s-14;
+  display: flex;
+  padding-left: 4px;
+  margin-bottom: 16px;
+  flex-direction: row;
+
+  input {
+    display: none;
+  }
+
+  label {
+    border-color: var(--neutral-10);
+    border-style: solid;
+    border-left-width: 0;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 40px;
+
+    box-sizing: border-box;
+    cursor: pointer;
+    &:active {
+      background-color: var(--primary-80);
+    }
+  }
+  label.rate-picker__label.disabled-picker.rate-picker__label_picked_tertiary {
+    &:active {
+      background-color: var(--neutral-10);
+    }
+  }
+  label.rate-picker__label.disabled-picker {
+    &:active {
+      background-color: transparent;
+    }
+  }
+}
+.rate-picker__item--left {
+  label {
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+  }
+}
+
+.rate-picker__item--right {
+  label {
+    border-right-width: 1px;
+    border-left-width: 0;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+  }
+}
+
+.rate-picker__label_picked_primary {
+  background-color: var(--primary-60-main);
+  color: var(--neutral-00);
+}
+
+.rate-picker__label_picked_tertiary {
+  background-color: var(--neutral-10);
+}
+
+label.rate-hover {
+  background-color: var(--primary-70);
+  color: var(--neutral-00);
+}
+
+.rate-picker__container {
+  label.star-picker {
+    width: auto;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    color: var(--neutral-10);
+  }
+  .rate-picker__label_picked_primary label.star-picker {
+    border-top-right-radius: none;
+    border-bottom-right-radius: none;
+  }
+  .rate-picker__label_picked_primary label.star-picker {
+    border-top-left-radius: none;
+    border-bottom-left-radius: none;
+  }
+  .rate-picker__label_picked_primary.star-picker {
+    background-color: transparent;
+    color: var(--primary-60-main);
+  }
+  .rate-picker__label_picked_tertiary.star-picker {
+    width: auto;
+    height: auto;
+    border: none;
+    background-color: transparent;
+    color: var(--primary-60-main);
+  }
+
+  label.star-picker.star-hover {
+    width: auto;
+    height: auto;
+    border: none;
+    color: var(--primary-70);
+    background-color: var(--neutral-00);
+    &:active {
+      background-color: transparent;
+      color: var(--primary-80);
+    }
+  }
+  label.star-picker.disabled-star {
+    cursor: inherit;
+    &:active {
+      background-color: transparent;
+    }
+  }
+  label.star-picker.disabled-picker {
+    cursor: inherit;
+    &:active {
+      background-color: inherit;
+    }
+  }
+}
+
+.rate-picker__container .star-picker {
+  padding-left: 2px;
+  padding-right: 2px;
+}
+.rate-picker__container .rate-picker__item--left .star-picker {
+  padding-left: 0;
+}
+.rate-picker__container .rate-picker__item--right .star-picker {
+  padding-right: 0;
+}
+
+.rate-picker__item--left,
+.rate-picker__item--right,
+.rate-picker__item {
+  &:focus {
+    @include a11y();
+  }
+}

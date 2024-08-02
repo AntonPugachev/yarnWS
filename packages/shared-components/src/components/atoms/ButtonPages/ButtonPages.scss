@@ -1,0 +1,44 @@
+@import "src/styles/mixins";
+
+.rf-button-pages {
+  height: 32px;
+  padding: 2px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--neutral-00);
+  box-shadow: 0 2px 6px rgba(25, 59, 104, 0.15);
+  border-radius: 8px;
+  user-select: none;
+}
+
+.rf-button-pages__button:focus {
+  outline: 2px solid var(--primary-60-main);
+  border-radius: 6px;
+}
+
+.rf-button-pages__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: var(--primary-60-main);
+  width: 32px;
+}
+
+.rf-button-pages__button:disabled {
+  pointer-events: none;
+  color: var(--neutral-50);
+}
+
+.rf-button-pages__value {
+  min-width: 28px;
+  flex-shrink: 0;
+  text-align: center;
+  margin: 0 6px;
+  @include text-s-14;
+  color: var(--neutral-90);
+}

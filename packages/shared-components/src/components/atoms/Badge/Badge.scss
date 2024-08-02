@@ -1,0 +1,126 @@
+@import '../../../styles/mixins';
+
+.rf-badge__wrapper {
+  display: inline-flex;
+  position: relative;
+}
+
+.rf-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 20px;
+  padding: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1;
+  border-radius: 10px;
+  transform: translate(50%, -50%);
+
+  @include caption;
+  cursor: inherit;
+}
+
+.badge-size--m {
+  height: 20px;
+  min-width: 23px;
+  font-size: 14px;
+}
+.badge-size--s {
+  height: 16px;
+  min-width: 17px;
+  font-size: 12px;
+}
+
+.rf-badge--text {
+  transform: translate(100%, -50%);
+}
+
+.rf-badge--near {
+  align-items: center;
+
+  .rf-badge {
+    transform: translate(0, 0);
+    position: static;
+    margin-left: 8px;
+    height: 16px;
+    min-width: 16px;
+    padding: 0 5px;
+    border-radius: 8px;
+  }
+}
+
+.rf-badge--light {
+  background-color: var(--neutral-10);
+}
+
+.rf-badge--info {
+  background-color: var(--primary-60-main);
+  color: var(--static-white);
+}
+.rf-badge--warning {
+  background-color: var(--attention-40);
+  color: var(--static-white);
+}
+.rf-badge--success {
+  background-color: var(--success-40);
+  color: var(--static-white);
+}
+.rf-badge--error {
+  background-color: var(--error-60-main);
+  color: var(--static-white);
+}
+.rf-badge--grey {
+  background-color: var(--neutral-50);
+  color: var(--static-white);
+}
+.rf-badge--dark {
+  background-color: var(--neutral-90);
+  color: var(--static-white);
+}
+.rf-badge--light-inactive {
+  background-color: var(--neutral-10);
+  color: var(--neutral-50);
+}
+.rf-badge--light-disable {
+  background-color: var(--neutral-10);
+  color: var(--neutral-30);
+}
+.rf-badge--white {
+  background-color: var(--neutral-00);
+  color: var(--neutral-90);
+}
+.rf-badge--white-inactive {
+  background-color: var(--neutral-00);
+  color: var(--neutral-50);
+}
+.rf-badge--white-disable {
+  background-color: var(--neutral-00);
+  color: var(--neutral-30);
+}
+
+.rf-badge--turquoise {
+  background-color: var(--teal-30);
+  color: var(--static-white);
+}
+
+.rf-badge--transparent {
+  background-color: transparent;
+  color: var(--static-white);
+}
+
+.rf-badge--dot--m {
+  @include round(16px);
+  padding: 0;
+  border: 2px solid var(--base-000);
+  box-sizing: content-box;
+}
+
+.rf-badge--dot--s {
+  @include round(12px);
+  padding: 0;
+  border: 2px solid var(--base-000);
+  box-sizing: content-box;
+}

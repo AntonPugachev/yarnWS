@@ -1,0 +1,56 @@
+@import "../../../styles/mixins";
+
+.rf-edit-mode {
+  display: flex;
+  flex-direction: column;
+
+  .rf-edit-mode__edit {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+  }
+
+  &.rf-edit-mode--disabled {
+    .rf-edit-mode__actions .rf-edit-mode__btn {
+      color: #b1b5bb;
+    }
+  }
+
+  .rf-edit-mode__content {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .rf-edit-mode__text {
+    display: flex;
+    min-height: 40px;
+    line-height: 24px;
+    padding-top: 8px;
+  }
+
+  .rf-edit-mode__actions {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+    column-gap: 4px;
+
+    .rf-edit-mode__btn {
+      color: #22242a;
+      min-height: 40px;
+      transition: 0.2s ease-in-out;
+
+      &.rf-edit-mode__btn--disabled {
+        background-color: #e5e7eb;
+        color: #b1b5bb;
+      }
+    }
+
+    .rf-edit-mode__btn-edit {
+      color: #74777f;
+
+      &:hover {
+        color: #0062ff;
+      }
+    }
+  }
+}

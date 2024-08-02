@@ -1,0 +1,119 @@
+@import '../../../styles/mixins';
+
+.rf-hint {
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+
+  &__icon {
+    display: flex;
+    flex-shrink: 0;
+    margin-right: 12px;
+    position: relative;
+    top: -2px;
+  }
+
+  &__close {
+    display: flex;
+    flex-shrink: 0;
+    margin-left: 12px;
+    margin-right: -4px;
+    color: var(--neutral-50);
+  }
+
+  &__body {
+    margin-right: auto;
+  }
+
+  &__title {
+    @include text-s-14-bold();
+    color: var(--neutral-90);
+  }
+
+  &__message {
+    @include text-s-14;
+    color: var(--neutral-90);
+  }
+
+  &__title,
+  &__message {
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__button {
+    display: inline-flex;
+  }
+
+  &--default {
+    background-color: var(--neutral-05);
+  
+    .rf-hint__icon {
+      color: var(--primary-60-main);
+    }
+  
+    .rf-hint__button {
+      color: var(--primary-60-main);
+    }
+  }
+  
+  &--default {
+    .rf-hint__icon {
+      color: var(--neutral-50);
+    }
+  
+    .rf-hint__button {
+      color: var(--neutral-50);
+    }
+  }
+  
+  &--blue {
+    background-color: var(--neutral-05);
+  
+    .rf-hint__icon {
+      color: var(--primary-60-main);
+    }
+  
+    .rf-hint__button {
+      color: var(--primary-60-main);
+    }
+  }
+  
+  &--green {
+    background-color: var(--success-10);
+  
+    .rf-hint__icon {
+      color: var(--success-50-main);
+    }
+  
+    .rf-hint__button {
+      color: var(--success-50-main);
+    }
+  }
+  
+  &--yellow {
+    background-color: var(--warning-10);
+  
+    .rf-hint__icon {
+      color: var(--warning-50-main);
+    }
+  
+    .rf-hint__button {
+      color: var(--warning-50-main);
+    }
+  }
+  
+  &--red {
+    background-color: var(--error-10);
+  
+    .rf-hint__icon {
+      color: var(--error-60-main);
+    }
+  
+    .rf-hint__button {
+      color: var(--error-60-main);
+    }
+  }
+}

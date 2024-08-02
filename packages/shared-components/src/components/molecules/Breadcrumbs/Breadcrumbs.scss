@@ -1,0 +1,10 @@
+.rf-breadcrumbs {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+
+  .rf-breadcrumbs__menu {
+    display: flex;
+  }
+}

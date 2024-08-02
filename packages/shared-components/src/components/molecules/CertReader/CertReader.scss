@@ -1,0 +1,35 @@
+@import '../../../styles/mixins';
+
+.cert__wrapper {
+  min-height: 200px;
+  padding: 20px 0;
+}
+
+.cert__success {
+  color: var(--success-50-main);
+}
+
+.cert__error {
+  color: var(--error-60-main);
+}
+
+.cert__wrapper .rf-menu {
+  padding-bottom: 24px;
+}
+
+.cert-reader__confirm-text {
+  @include text-m-16();
+}
+
+.cert-reader__certificate {
+  @include text-s-14();
+  color: var(--neutral-50);
+  margin-top: 12px;
+}
+
+.cert-reader__confirm-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+  gap: 16px;
+}

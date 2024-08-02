@@ -1,0 +1,316 @@
+@mixin theme-static() {
+  --static-white: #ffffff;
+
+  --dark-static-neutral-00: #141618;
+  --dark-static-neutral-05: #1f2024;
+  --dark-static-neutral-10: #292a2e;
+  --dark-static-neutral-20: #3a3c41;
+  --dark-static-neutral-30: #4e5158;
+  --dark-static-neutral-50: #7b8088;
+  --dark-static-neutral-80: #cdd0d6;
+  --dark-static-neutral-90: #ebedf0;
+
+  --dark-static-primary-60: #3481ff;
+  --dark-static-primary-70: #5290ff;
+  --dark-static-primary-80: #689fff;
+
+  --dark-static-error-60: #ea3c3c;
+
+  --dark-static-success-50: #16913f;
+
+  --dark-static-hover: rgba(255, 255, 255, 0.06);
+  --dark-static-focus: rgba(255, 255, 255, 0.09);
+  --dark-static-press: rgba(255, 255, 255, 0.12);
+}
+
+@mixin theme-light() {
+  --neutral-00: #ffffff;
+  --neutral-05: #f3f4f6;
+  --neutral-10: #e5e7eb;
+  --neutral-20: #d6d8dd;
+  --neutral-30: #b1b5bb;
+  --neutral-40: #9ca0a7;
+  --neutral-50: #74777f;
+  --neutral-60: #666970;
+  --neutral-70: #505258;
+  --neutral-80: #37383c;
+  --neutral-90: #22242a;
+
+  --primary-10: #edf5ff;
+  --primary-20: #dde9ff;
+  --primary-30: #a7c7ff;
+  --primary-40: #6fa3ff;
+  --primary-50: #3a85ff;
+  --primary-60-main: #0062ff;
+  --primary-70: #0046e2;
+  --primary-80: #0132b0;
+
+  --elevated-bg: #ffffff;
+
+  --hover: rgba(0, 0, 0, 0.05);
+  --focus: rgba(0, 0, 0, 0.09);
+  --press: rgba(0, 0, 0, 0.12);
+  --modal: rgba(0, 0, 0, 0.4);
+
+  --error-10: #ffefef;
+  --error-20: #ffdddd;
+  --error-30: #ffa7a7;
+  --error-40: #ff7c7c;
+  --error-50: #f64e4e;
+  --error-60-main: #d92020;
+  --error-70: #ba1717;
+  --error-80: #981111;
+
+  --success-10: #eafcf1;
+  --success-20: #c3f4d3;
+  --success-30: #80dca0;
+  --success-40: #32c665;
+  --success-50-main: #1ba049;
+  --success-60: #128238;
+  --success-70: #0b682a;
+
+  --warning-10: #fff1e5;
+  --warning-20: #ffdece;
+  --warning-30: #ffb799;
+  --warning-40: #ff8d64;
+  --warning-50-main: #ff5c22;
+  --warning-60: #d63f09;
+  --warning-70: #a63208;
+
+  --attention-10: #fef5d7;
+  --attention-20: #fee7a0;
+  --attention-30: #fddd77;
+  --attention-40: #fdd14c;
+  --attention-50-main: #ffc400;
+  --attention-60: #f0b902;
+  --attention-70: #dfab00;
+
+  --purple-10: #f6f2ff;
+  --purple-20: #ebe0ff;
+  --purple-30: #d4bbff;
+  --purple-40: #be95ff;
+  --purple-50: #a56eff;
+  --purple-60-main: #8a3ffc;
+  --purple-70: #6929c4;
+  --purple-80: #491d8b;
+
+  --magenta-10: #fff0f7;
+  --magenta-20: #ffdbeb;
+  --magenta-30: #ffafd2;
+  --magenta-40: #ff7eb6;
+  --magenta-50: #ee5396;
+  --magenta-60-main: #d02670;
+  --magenta-70: #9f1853;
+  --magenta-80: #740937;
+
+  --cyan-10: #e5f6ff;
+  --cyan-20: #c4eaff;
+  --cyan-30: #82cfff;
+  --cyan-40: #33b1ff;
+  --cyan-50: #1192e8;
+  --cyan-60-main: #0072c3;
+  --cyan-70: #00539a;
+  --cyan-80: #003a6d;
+
+  --teal-10: #d9fbfb;
+  --teal-20: #b0f0f0;
+  --teal-30: #3ddbd9;
+  --teal-40: #08bdba;
+  --teal-50: #009d9a;
+  --teal-60-main: #007d79;
+  --teal-70: #005d5d;
+  --teal-80: #004144;
+
+  --shadow-02: 0px 0.9px 2px rgba(0, 0, 0, 0.28);
+  --shadow-04: 0px 0.2px 0.9px 0.3px rgba(0, 0, 0, 0.12), 0px 1.6px 3.6px rgba(0, 0, 0, 0.14);
+  --shadow-08: 0px -1.5px 6px rgba(0, 0, 0, 0.06), 0px 0.6px 1.8px rgba(0, 0, 0, 0.1), 0px 3.2px 9px rgba(0, 0, 0, 0.16);
+  --shadow-16: 0px 1.2px 18px rgba(0, 0, 0, 0.08), 0px 6.4px 28px rgba(0, 0, 0, 0.12);
+  --shadow-stroke: inset 0px -1px 0px #D6D8DD;
+}
+
+@mixin theme-dark() {
+  --neutral-00: #141618;
+  --neutral-05: #1f2024;
+  --neutral-10: #292a2e;
+  --neutral-20: #3a3c41;
+  --neutral-30: #4e5158;
+  --neutral-40: #5e6169;
+  --neutral-50: #7b8088;
+  --neutral-60: #898e96;
+  --neutral-70: #a7abb3;
+  --neutral-80: #cdd0d6;
+  --neutral-90: #ebedf0;
+
+  --primary-10: #1f2024;
+  --primary-20: #162b67;
+  --primary-30: #022d9a;
+  --primary-40: #0142d3;
+  --primary-50: #0062ff;
+  --primary-60-main: #3481ff;
+  --primary-70: #5290ff;
+  --primary-80: #689fff;
+
+  --elevated-bg: #1f2024;
+
+  --hover: rgba(255, 255, 255, 0.06);
+  --focus: rgba(255, 255, 255, 0.09);
+  --press: rgba(255, 255, 255, 0.12);
+  --modal: rgba(0, 0, 0, 0.4);
+
+  --error-10: #1f2024;
+  --error-20: #571b1b;
+  --error-30: #880c0c;
+  --error-40: #a71212;
+  --error-50: #d92020;
+  --error-60-main: #ea3c3c;
+  --error-70: #f55f5f;
+  --error-80: #fa7979;
+
+  --success-10: #1f2024;
+  --success-20: #0e3b1e;
+  --success-30: #055320;
+  --success-40: #0c7431;
+  --success-50-main: #16913f;
+  --success-60: #1fa951;
+  --success-70: #2fc063;
+
+  --warning-10: #1f2024;
+  --warning-20: #591c04;
+  --warning-30: #902c06;
+  --warning-40: #bc3b0d;
+  --warning-50-main: #ef5018;
+  --warning-60: #ff662f;
+  --warning-70: #ff8559;
+
+  --attention-10: #1f2024;
+  --attention-20: #ca9b00;
+  --attention-30: #dfab00;
+  --attention-40: #f0b902;
+  --attention-50-main: #ffc400;
+  --attention-60: #fdd14c;
+  --attention-70: #fddd77;
+
+  --purple-10: #1f2024;
+  --purple-20: #391968;
+  --purple-30: #491d8b;
+  --purple-40: #6929c4;
+  --purple-50: #8a3ffc;
+  --purple-60-main: #a065fe;
+  --purple-70: #b587ff;
+  --purple-80: #ceb1ff;
+
+  --magenta-10: #1f2024;
+  --magenta-20: #510224;
+  --magenta-30: #740937;
+  --magenta-40: #9f1853;
+  --magenta-50: #d02670;
+  --magenta-60-main: #e84a8e;
+  --magenta-70: #f970ab;
+  --magenta-80: #fea2ca;
+
+  --cyan-10: #1f2024;
+  --cyan-20: #002d56;
+  --cyan-30: #003a6d;
+  --cyan-40: #00539a;
+  --cyan-50: #0072c3;
+  --cyan-60-main: #0e8ce1;
+  --cyan-70: #28a6f6;
+  --cyan-80: #70c7fd;
+
+  --teal-10: #1f2024;
+  --teal-20: #023136;
+  --teal-30: #004144;
+  --teal-40: #005d5d;
+  --teal-50: #007d79;
+  --teal-60-main: #009692;
+  --teal-70: #06b2af;
+  --teal-80: #2fd2cf;
+
+  --shadow-02: 0px 0.9px 2px rgba(0, 0, 0, 0.42);
+  --shadow-04: 0px 0.2px 1px 0.4px rgba(0, 0, 0, 0.2), 0px 1.6px 3.6px rgba(0, 0, 0, 0.22);
+  --shadow-08: 0px -1.5px 6px rgba(0, 0, 0, 0.09), 0px 0.6px 2px rgba(0, 0, 0, 0.16), 0px 3.2px 16px rgba(0, 0, 0, 0.28);
+  --shadow-16: 0px 1.2px 18px rgba(0, 0, 0, 0.12), 0px 6.4px 28px rgba(0, 0, 0, 0.24);
+  --shadow-stroke: inset 0px -1px 0px #3A3C41;
+}
+
+@mixin theme-old {
+  --basic-primary: #0d69f2;
+  --basic-secondary: #2b313b;
+  --basic-tertiary: #8a96a8;
+  --basic-hover: #0a54c2;
+  --basic-press: #0949aa;
+  --basic-disable: #c4cad4;
+  --basic-primary-light: #6ea5f7;
+
+  --background-primary: #ffffff;
+  --background-secondary: #f1f2f4;
+  --background-tertiary: #e2e5e9;
+  --background-tertiary-hover: #d3d8de;
+  --background-card: #ffffff;
+  --background-card-hover: #ffffff;
+  --background-inversion: #2b313b;
+  --background-shadow: #8a96a8;
+  --background-header: #0949aa;
+  --background-danger: #fef0f1;
+  --background-warn: #fff7f0;
+  --background-success: #f2fcf5;
+
+  --text-primary: #2b313b;
+  --text-secondary: #626f84;
+  --text-tertiary: #a7b0be;
+  --text-inversion: #ffffff;
+  --text-static-white: #ffffff;
+  --text-static-black: #2b313b;
+
+  --status-warn: #ff8c19;
+  --status-warn-hover: #e57300;
+  --status-warn-press: #cc6600;
+
+  --status-success: #2abb5b;
+  --status-success-hover: #219246;
+  --status-success-press: #1c7d3c;
+
+  --status-danger: #da0b20;
+  --status-danger-hover: #a90919;
+  --status-danger-press: #910815;
+
+  --special-blue: #3f7dfe;
+  --special-softBlue: #e6eeff;
+  --special-lightBlue: #0abbfb;
+  --special-softLightBlue: #e6f8ff;
+  --special-turquoise: #4ad2ca;
+  --special-softTurquoise: #eafaf9;
+  --special-green: #5ecf70;
+  --special-softGreen: #ebf9ee;
+  --special-yellow: #ffaf37;
+  --special-softYellow: #fff5e6;
+  --special-red: #ff525c;
+  --special-softRed: #ffe6e7;
+  --special-magenta: #e052bd;
+  --special-softMagenta: #fbe9f7;
+  --special-purple: #bf67c7;
+  --special-softPurple: #f7ecf8;
+  --special-violet: #8742f0;
+  --special-softViolet: #f0e7fd;
+  --special-gray: #98abcd;
+  --special-softGray: #edf1f8;
+
+  --shadow-clickable-active: 0px 2px 4px rgba(138, 150, 168, 0.4),
+    0px -2px 2px rgba(138, 150, 168, 0.08);
+  --shadow-clickable-default: 0px 4px 8px rgba(138, 150, 168, 0.4),
+    0px -2px 4px rgba(138, 150, 168, 0.08);
+  --shadow-non-clickable: 0px 4px 16px rgba(138, 150, 168, 0.4),
+    0px 0px 6px rgba(138, 150, 168, 0.08);
+  --shadow-clickable-hover: 0px 8px 16px rgba(138, 150, 168, 0.4),
+    0px -2px 8px rgba(138, 150, 168, 0.08);
+}
+
+:root {
+  @include theme-old();
+  @include theme-static();
+  @include theme-light();
+}
+
+body.dark {
+  @include theme-dark();
+}

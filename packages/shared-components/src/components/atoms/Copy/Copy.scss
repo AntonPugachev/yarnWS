@@ -1,0 +1,21 @@
+@import "src/styles/mixins";
+
+.rf-copy {
+  display: flex;
+  color: var(--neutral-50);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+
+  &.rf-copy--disabled {
+    pointer-events: none;
+    color: var(--neutral-30);
+  }
+
+  &:hover {
+    color: var(--primary-70);
+  }
+
+  &:focus {
+    @include a11y();
+  }
+}

@@ -1,0 +1,69 @@
+@import 'src/styles/mixins';
+
+.rf-employee {
+  cursor: default;
+}
+
+.rf-employee__tile {
+  box-shadow: 0px 2px 6px 0px #193b6826;
+  border-radius: 20px;
+}
+.rf-employee__tile--disable-shadow {
+  box-shadow: none;
+}
+
+.rf-employee__title {
+  @include h6;
+  padding-bottom: 20px;
+}
+
+.rf-employee__details-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+.rf-employee__details {
+  margin-left: 16px;
+}
+
+.rf-employee__name-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.rf-employee__name {
+  @include h5;
+}
+
+.rf-employee__info {
+  @include text-m-16;
+  color: var(--neutral-50);
+  &:not(:last-child) {
+    margin-bottom: 4px;
+  }
+}
+
+.rf-employee__info-department {
+  display: inline-flex;
+  align-items: center;
+}
+
+.rf-employee__department-icon {
+  margin-left: 8px;
+  color: var(--neutral-50);
+  cursor: pointer;
+}
+
+.rf-employee__button {
+  @include text-l-16;
+  display: flex;
+  margin-top: 20px;
+  color: var(--primary-60-main);
+  &:hover {
+    cursor: pointer;
+  }
+}
+.rf-employee__tile--disabledShadow {
+  padding: 20px 20px 20px 0px;
+}

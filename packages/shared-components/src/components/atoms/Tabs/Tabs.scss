@@ -1,0 +1,145 @@
+@import '../../../styles/mixins';
+
+$lineWidth: 2px;
+
+.rf-tabs__navigation {
+  position: relative;
+  border-bottom: $lineWidth solid transparent;
+
+  &__line {
+    border-bottom: $lineWidth solid var(--neutral-10);
+  }
+}
+
+.rf-tabs__navigation-list {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &--without-menu {
+    overflow: hidden;
+  }
+}
+
+.rf-tabs__navigation-line {
+  position: absolute;
+  bottom: -$lineWidth;
+  left: 0;
+  height: $lineWidth;
+  background-color: var(--primary-60-main);
+
+  transition: 0.3s;
+}
+
+.rf-tabs__link {
+  white-space: nowrap;
+
+  &--hidden {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    user-select: none;
+  }
+}
+
+.rf-tabs__link:last-of-type {
+  margin-right: 0;
+}
+
+.rf-tabs__button {
+  display: flex;
+  align-items: center;
+  height: auto;
+  color: var(--neutral-50);
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  padding: 12px 16px;
+
+  &:not(.rf-tabs__button--active) {
+    & .rf-badge {
+      background-color: var(--neutral-10);
+      color: var(--text-text-secondary);
+    }
+  }
+
+  &:focus {
+    @include a11y();
+  }
+}
+
+.rf-tabs__button--md {
+  @include text-l-16;
+  padding: 12px 16px;
+}
+
+.rf-tabs__button--sm {
+  @include text-s-14;
+  padding: 10px 12px;
+}
+
+.rf-tabs__button--active {
+  color: var(--neutral-90);
+}
+
+.rf-tabs__button:disabled {
+  color: var(--neutral-30);
+  pointer-events: none;
+}
+
+.rf-tabs__content {
+  margin-top: 24px;
+}
+
+.rf-tabs__icon {
+  &:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  svg {
+    display: block;
+  }
+}
+
+.button-group__menu {
+  max-width: 240px;
+}
+
+.rf-tabs__menu {
+  position: absolute;
+  right: 4px;
+  top: 0;
+  width: auto;
+
+  .rf-tabs__menu__btn {
+    color: var(--neutral-50);
+    margin-bottom: 10px;
+
+    &:active,
+    &:hover {
+      background-color: transparent;
+      color: var(--primary-60-main);
+    }
+  }
+
+  &--active {
+    .rf-tabs__menu__btn {
+      color: var(--primary-80);
+    }
+  }
+}
+
+.rf-tabs__menu-link {
+  .rf-tabs__menu-button {
+    width: 100%;
+    transition: 0.2s ease-in-out;
+
+    &--active {
+      background-color: var(--neutral-10);
+    }
+  }
+
+  .rf-tabs__menu-button:hover {
+    background-color: var(--neutral-05);
+  }
+}

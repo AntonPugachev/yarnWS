@@ -1,0 +1,14 @@
+@import '../../../styles/mixins';
+.doc__wrapper {
+  margin-bottom: 16px;
+}
+
+.doc__title {
+  @include text-m-16;
+  color: var(--neutral-50);
+  margin-bottom: 4px;
+}
+
+.story-sign__wrapper {
+  background-color: var(--neutral-05);
+}

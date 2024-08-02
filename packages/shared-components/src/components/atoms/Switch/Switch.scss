@@ -1,0 +1,128 @@
+@import "../../../styles/mixins";
+
+.rf-switch {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+
+  .rf-switch__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8px;
+  }
+
+  &.rf-switch--reverse {
+    flex-direction: row-reverse;
+
+    .rf-switch__content {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+
+  &.rf-switch--between {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &:focus {
+    @include a11y();
+  }
+}
+
+.rf-switch__toggle {
+  width: 36px;
+  height: 20px;
+  border-radius: 10px;
+  position: relative;
+  //border: 1px solid transparent;
+}
+
+.rf-switch--s .rf-switch__toggle {
+  width: 28px;
+  height: 16px;
+}
+
+.rf-switch__toggle.on {
+  background-color: var(--primary-60-main);
+  border-color: var(--primary-60-main);
+}
+
+.rf-switch__toggle.off {
+  background-color: var(--neutral-50);
+  border-color: var(--neutral-50);
+}
+
+.rf-switch__circle {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  @include round(16px);
+  background-color: var(--neutral-00);
+  transition: 0.15s ease-in-out;
+}
+
+.rf-switch--s .rf-switch__circle {
+  @include round(12px);
+}
+
+.rf-switch__toggle.off .rf-switch__circle {
+  transform: translateX(0);
+}
+
+.rf-switch__toggle.on .rf-switch__circle {
+  transform: translateX(16px);
+}
+
+.rf-switch--s .rf-switch__toggle.on .rf-switch__circle {
+  transform: translateX(12px);
+}
+
+.rf-switch__label {
+  @include text-m-16;
+  user-select: none;
+}
+
+.rf-switch__helper-text {
+  @include text-s-14;
+  user-select: none;
+  color: var(--neutral-50);
+  flex: 1 1 100%;
+
+  .rf-switch--s & {
+    @include caption;
+    color: var(--neutral-50);
+  }
+}
+
+.rf-switch:not(.rf-switch--disable):hover {
+  .rf-switch__toggle.on {
+    background-color: var(--primary-70);
+    border-color: var(--primary-70);
+  }
+
+  .rf-switch__toggle.off {
+    background-color: var(--neutral-50);
+    border-color: var(--neutral-50);
+  }
+}
+
+.rf-switch--disable {
+  @include disabled;
+
+  .rf-switch__toggle {
+    cursor: default;
+  }
+
+  .rf-switch__toggle.on {
+    background-color: var(--neutral-30);
+    border-color: var(--neutral-30);
+  }
+
+  .rf-switch__toggle.off {
+    background-color: var(--neutral-30);
+    border-color: var(--neutral-30);
+  }
+}

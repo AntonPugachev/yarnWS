@@ -1,0 +1,79 @@
+@import 'src/styles/mixins';
+
+.rf-datepicker {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+.rf-datepicker__focus-border > .rf-datepicker__input-wrapper {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  &:hover {
+    border: 1px solid var(--primary-70);
+  }
+}
+.rf-datepicker__input-wrapper {
+  cursor: pointer;
+  box-sizing: border-box;
+  svg {
+    color: var(--neutral-30);
+  }
+}
+
+.filter__wrapper .rf-input {
+  height: 38px;
+}
+
+.rf-datepicker__calendar-button {
+  transition: 0.35s;
+  color: var(--neutral-50);
+  cursor: pointer;
+  pointer-events: none;
+
+  svg {
+    color: var(--neutral-50);
+  }
+}
+
+.rf-datepicker__calendar-chevron {
+  cursor: pointer;
+  pointer-events: none;
+  svg {
+    color: var(--neutral-50);
+  }
+}
+
+.rf-datepicker__calendar-chevron.rf-datepicker__calendar-cross {
+  pointer-events: auto;
+}
+
+.rf-datepicker__input-wrapper--disabled {
+  pointer-events: none;
+  color: var(--neutral-90);
+
+  .rf-datepicker__calendar-button,
+  .rf-datepicker__calendar-chevron {
+    cursor: pointer;
+  }
+}
+
+.card-filter__status-picker .rf-select__wrapper {
+  box-shadow: none;
+}
+
+.rf-datepicker__input-wrapper--readonly {
+  .rf-input {
+    pointer-events: none;
+  }
+}
+
+.rf-datepicker__input-day {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  transform: translateY(-50%);
+  @include text-l-16;
+  pointer-events: none;
+  text-transform: capitalize;
+}

@@ -1,0 +1,36 @@
+{
+  "name": "yarn-workspases",
+  "packageManager": "yarn@4.3.1",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "cd ./packages/vite-project && yarn dev",
+    "start-sb": "cd ./packages/shared-components && yarn start"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@monorepo/shared-components": "workspace:*",
+    "@storybook/builder-vite": "8.2.7",
+    "@storybook/core": "8.2.7",
+    "@storybook/react": "^8.2.7",
+    "@storybook/react-vite": "^8.2.7",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-prettier": "5.2.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "prettier": "3.0.3",
+    "sass": "1.77.8",
+    "storybook": "^8.2.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4"
+  }
+}

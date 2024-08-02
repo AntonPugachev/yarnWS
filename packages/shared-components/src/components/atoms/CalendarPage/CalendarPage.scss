@@ -1,0 +1,71 @@
+@import "src/styles/mixins";
+
+.rf-calendar-page {
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: #{36 * 7}px;
+    margin-right: -8px;
+    margin-bottom: -8px;
+  
+  }
+
+  &__cell {
+    @include text-s-14;
+    border-radius: 4px;
+    padding: 6px 4px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    width: 28px;
+    text-align: center;
+    color: var(--neutral-90);
+
+    &_weekday {
+      color: var(--neutral-50);
+    }
+
+    &_disabled {
+      color: var(--neutral-30);
+    }
+
+    &_default {
+      background-color: var(--primary-60-main);
+      color: var(--static-white);
+
+      &-intermediate {
+        background-color: var(--neutral-05);
+        color: var(--primary-60-main);
+      }
+    }
+
+    &_red {
+      background-color: var(--error-50);
+      color: var(--static-white);
+
+      &-intermediate {
+        background-color: var(--neutral-05);
+        color: var(--error-50);
+      }
+    }
+
+    &_yellow {
+      background-color: var(--attention-40);
+      color: var(--static-white);
+
+      &-intermediate {
+        background-color: var(--neutral-05);
+        color: var(--attention-40);
+      }
+    }
+
+    &_magenta {
+      background-color: var(--magenta-40);
+      color: var(--static-white);
+
+      &-intermediate {
+        background-color: var(--neutral-05);
+        color: var(--magenta-40);
+      }
+    }
+  }
+}

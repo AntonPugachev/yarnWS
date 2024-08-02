@@ -1,0 +1,61 @@
+@import "../../../styles/mixins";
+
+.rf-card__wrapper {
+  width: 880px;
+  cursor: default;
+}
+
+.rf-card__tile {
+  box-shadow: 0px 2px 6px 0px #193B6826;
+  border-radius: 20px;
+  transition: 0.15s;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0px 8px 16px rgba(138, 150, 168, 0.4), 0px -2px 8px rgba(138, 150, 168, 0.08);
+
+    & .rf-card__title {
+      color: var(--primary-70);
+    }
+  }
+}
+
+.rf-card__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.rf-card__row_first-row {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.rf-card__title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.rf-card__title {
+  @include text-l-16-bold();
+  transition: 0.15s;
+}
+
+.rf-card__subtitle {
+  @include text-m-16();
+  color: var(--neutral-50)
+}
+
+.rf-card__tooltip-text {
+  display: block;
+  white-space:nowrap;
+}
+
+.rf-card__button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}

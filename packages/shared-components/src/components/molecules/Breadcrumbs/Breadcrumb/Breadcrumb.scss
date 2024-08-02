@@ -1,0 +1,30 @@
+@import "src/styles/mixins";
+
+$linkColor: #74777f;
+$linkColorHover: #0062ff;
+
+.rf-breadcrumb__wrap {
+  display: flex;
+}
+
+.rf-breadcrumb__wrap--hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  user-select: none;
+}
+
+.rf-breadcrumb {
+  padding-right: 10px;
+  @include text-s-14;
+  color: $linkColor;
+  white-space: nowrap;
+
+  &:hover {
+    color: $linkColorHover;
+  }
+
+  .rf-breadcrumb__icon {
+    color: $linkColor;
+  }
+}
