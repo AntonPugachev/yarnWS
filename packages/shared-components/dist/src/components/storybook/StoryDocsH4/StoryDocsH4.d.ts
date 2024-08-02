@@ -1,2 +1,3 @@
 import './StoryDocsH4.scss';
-export declare const StoryDocsH4: React.FC;
+import { PropsWithChildren } from 'react';
+export declare const StoryDocsH4: ({ children }: PropsWithChildren) => import("react/jsx-runtime").JSX.Element;

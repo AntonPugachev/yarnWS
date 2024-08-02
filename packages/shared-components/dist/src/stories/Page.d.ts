@@ -1,2 +1,2 @@
 import './page.css';
-export declare const Page: React.FC;
+export declare const Page: () => import("react/jsx-runtime").JSX.Element;

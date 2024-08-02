@@ -1,13 +1,10 @@
-import  {
-  ReactElement, ReactNode, useEffect, useState
-} from 'react';
+import { ReactElement, ReactNode, useEffect, useState } from 'react';
 import './PopupMaker.scss';
 import { BehaviorSubject } from 'rxjs';
 import Modal from '../../atoms/Modal';
 import { IModalProps } from '../../atoms/Modal/Modal';
 
-
-type ModalPropsType = Omit<IModalProps, 'children'>
+type ModalPropsType = Omit<IModalProps, 'children'>;
 
 /** Стак попапов */
 export let popups$$ = new BehaviorSubject<ReactNode[]>([]);
@@ -27,7 +24,7 @@ export const openPopup = (component: ReactElement, modalProps: ModalPropsType) =
   popups$$.next(popups$$.getValue().concat([componentModal]));
 };
 
-const PopupMaker: React.FC = () => {
+const PopupMaker = () => {
   const [modalComponent, setModalComponent] = useState<ReactNode[]>([]);
 
   /** Подписываемся на стек попапов*/

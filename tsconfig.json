@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "jsx": "react-jsx",
     "paths": {
       "@monorepo/*": ["./packages/*"]
     }
@@ -8,6 +9,9 @@
   "references": [
     {
       "path": "./packages/vite-project"
+    },
+    {
+      "path": "./packages/shared-components"
     }
   ]
 }

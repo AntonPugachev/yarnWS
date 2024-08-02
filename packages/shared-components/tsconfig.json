@@ -17,6 +17,7 @@
     "module": "commonjs",
     "moduleResolution": "node",
     "jsx": "react-jsx",
+    "noEmit": true,
     "skipLibCheck": true,
     "resolveJsonModule": true
   },

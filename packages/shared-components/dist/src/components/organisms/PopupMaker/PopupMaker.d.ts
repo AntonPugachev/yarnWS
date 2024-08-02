@@ -7,5 +7,5 @@ type ModalPropsType = Omit<IModalProps, 'children'>;
 export declare let popups$$: BehaviorSubject<ReactNode[]>;
 /** Основная функция добавления попапа в стек */
 export declare const openPopup: (component: ReactElement, modalProps: ModalPropsType) => void;
-declare const PopupMaker: React.FC;
+declare const PopupMaker: () => import("react/jsx-runtime").JSX.Element;
 export default PopupMaker;
