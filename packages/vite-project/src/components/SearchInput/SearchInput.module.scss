@@ -1,0 +1,23 @@
+@use '@monorepo/shared-components/src/styles/colors';
+
+:root {
+  --input-base: var(--base-primary);
+  --input-hover: var(--base-primary);
+  --input-active: var(--base-primary);
+}
+
+.input-wrapper {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  align-items: center;
+  :hover {
+    box-shadow: 0 0 0 1px var(--primary-50);
+  }
+}
+.input-base {
+  border: none;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 0 1px var(--primary-60-main);
+  border-radius: 0.5rem;
+}

@@ -21,7 +21,10 @@
     "skipLibCheck": true,
     "resolveJsonModule": true
   },
-  "files": [ "./src/index.ts","custom.d.ts","vite.config.ts"],
+  "files": ["./src/index.ts", "custom.d.ts", "vite.config.ts"],
   "include": ["src"],
+  "paths": {
+    "@monorepo/shared-components/*": ["packages/shared-components/*"]
+  },
   "exclude": ["dist", "node_modules", "**/*.spec.*", "**/*.stories.*", "**/*.mocks.*"]
 }
