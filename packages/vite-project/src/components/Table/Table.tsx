@@ -6,13 +6,11 @@ export const Table = () => {
     getPlanets();
   }, []);
   const bodyJSX = planets.value.map((data) => (
-    <tr>
+    <tr key={data.name}>
       <td>{data.name}</td>
       <td>{data.population}</td>
       <td>{data.rotation_period}</td>
-      <td>
-        <img src={data.url} alt='Picture of the planet' />
-      </td>
+      <td>{data.climate}</td>
     </tr>
   ));
 
@@ -23,7 +21,7 @@ export const Table = () => {
           <th>Planet Name</th>
           <th>Population</th>
           <th>Rotation Period</th>
-          <th>Image</th>
+          <th>Climate</th>
         </tr>
       </thead>
       <tbody>{bodyJSX}</tbody>
