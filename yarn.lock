@@ -1696,14 +1696,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/error-message@npm:2.0.0":
-  version: 2.0.0
-  resolution: "@hookform/error-message@npm:2.0.0"
+"@hookform/error-message@npm:2.0.1":
+  version: 2.0.1
+  resolution: "@hookform/error-message@npm:2.0.1"
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
     react-hook-form: ^7.0.0
-  checksum: 10/d1f8e73b947197bde8b4048ac527195f1aa6fc2da62f1bc102dd9b92c7cb2d7fe88dc2215b734b45e027b1e3df7cbb0bc75d15369f7552b53fa220853ef97939
+  checksum: 10/96665a078471f68a9fcc78f55a024f4caf1db2e32b5ff36d1755b3e9bfbb54a4f114c76d7da27147cca281e96dc0773bcd904760e96df1fd5c336ff182b02633
   languageName: node
   linkType: hard
 
@@ -1874,7 +1874,7 @@ __metadata:
   resolution: "@monorepo/shared-components@workspace:packages/shared-components"
   dependencies:
     "@chromatic-com/storybook": "npm:^1.6.1"
-    "@hookform/error-message": "npm:2.0.0"
+    "@hookform/error-message": "npm:2.0.1"
     "@popperjs/core": "npm:2.11.2"
     "@storybook/addon-actions": "npm:8.2.7"
     "@storybook/addon-designs": "npm:8.0.3"
@@ -1991,6 +1991,25 @@ __metadata:
   version: 2.11.2
   resolution: "@popperjs/core@npm:2.11.2"
   checksum: 10/88796d399a2464cc7b8636326c5454f32114d47f3d50e31ec34c6ab9df82c9e345f9dd71e9a33516dcd196106272399cf6d77d319795687b09feb3a70241956d
+  languageName: node
+  linkType: hard
+
+"@preact/signals-core@npm:^1.7.0":
+  version: 1.8.0
+  resolution: "@preact/signals-core@npm:1.8.0"
+  checksum: 10/480c1aaf1bce6f8bd5544eec9fd92a70ccdfffa24c23d99aa8e3c13783cc6b06ec0a3d90578c5fd368d06121cbe0f8fbe81368aa45ddba11d8a28af15410a9dc
+  languageName: node
+  linkType: hard
+
+"@preact/signals-react@npm:2.1.0":
+  version: 2.1.0
+  resolution: "@preact/signals-react@npm:2.1.0"
+  dependencies:
+    "@preact/signals-core": "npm:^1.7.0"
+    use-sync-external-store: "npm:^1.2.0"
+  peerDependencies:
+    react: ^16.14.0 || 17.x || 18.x
+  checksum: 10/f94f32e0f38ba9d6d8a3d6627ebb6ea2ab4632cd876657dc48bf00671ca198928b0e9ad4526ade0b45a4aee19f8da6e43878becfcb33f6744b7f66e30d773b64
   languageName: node
   linkType: hard
 
@@ -8719,6 +8738,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:^1.2.0":
+  version: 1.2.2
+  resolution: "use-sync-external-store@npm:1.2.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: 10/671e9c190aab9a8374a5d468c6ba17f52c38b6fae970110bc196fc1e2b57204149aea9619be49a1bb5207fb6e51d8afd19c3bcb94afe61813fed039821461dc0
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -8774,6 +8802,7 @@ __metadata:
   resolution: "vite-project@workspace:packages/vite-project"
   dependencies:
     "@monorepo/shared-components": "workspace:*"
+    "@preact/signals-react": "npm:2.1.0"
     "@types/react": "npm:^18.3.3"
     "@types/react-dom": "npm:^18.3.0"
     "@typescript-eslint/eslint-plugin": "npm:^7.15.0"

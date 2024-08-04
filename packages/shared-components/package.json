@@ -19,8 +19,9 @@
     "size": "source-map-explorer dist/index.js --no-border-checks",
     "make-icons": "ts-node src/assets/icons/iconProcessor.ts && eslint --fix --ext .ts,.tsx src/assets/icons/resultDir src/components/atoms/Icons/Icons.stories.tsx"
   },
+  "type": "module",
   "dependencies": {
-    "@hookform/error-message": "2.0.0",
+    "@hookform/error-message": "2.0.1",
     "@popperjs/core": "2.11.2",
     "axios": "1.7.3",
     "crypto-pro": "2.3.0",

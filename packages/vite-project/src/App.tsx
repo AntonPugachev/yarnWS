@@ -1,11 +1,11 @@
-import { useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 import Button from '@monorepo/shared-components/src/components/atoms/Button';
-function App() {
-  const [count, setCount] = useState(0);
+import { signal } from '@preact/signals-react';
+const count = signal(0);
 
+function App() {
   return (
     <>
       <div>
@@ -18,7 +18,7 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className='card'>
-        <Button buttonType={'danger'} onClick={() => setCount((count) => count + 1)}>
+        <Button buttonType={'danger'} onClick={() => count.value++}>
           count is {count}
         </Button>
         <p>

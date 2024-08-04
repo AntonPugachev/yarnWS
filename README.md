@@ -1,6 +1,6 @@
 # yarnWS
 
-* yarn workspaces monorepo
+* yarn workspaces monorepo pnp
 * vite project
 * shared-library
 
